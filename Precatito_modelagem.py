@@ -23,7 +23,7 @@ def CSV():
                 df.to_csv(temp_csv_file, index=False)
                 
                 # Create the OpenAI LLM instance with the correct model
-                llm = OpenAI(api_key=OPENAI_API_KEY, model="davinci-codex")
+                llm = OpenAI(api_key=OPENAI_API_KEY, model="ext-davinci-002")
                 
                 # Pass the CSV file path to create_csv_agent
                 agent = create_csv_agent(llm, temp_csv_file, column_names=cola, sep=';')
