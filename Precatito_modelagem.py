@@ -21,7 +21,7 @@ def CSV():
     else:
         print("OPENAI_API_KEY is set")
 
-    csv_file_path = 
+    csv_file_path = r"Z:\Share_Analytics\01. Colaboradores\Caio\Pasta1.csv"
     if os.path.exists(csv_file_path):
 
         cola = ['Periodos.Periodo', 'Reserva de produtos', 'PROC', 'CLASSIFICAÇÃO DO PERÍODO', 'CLASSIFICAÇÃO', 'AUTORA', 'DESMEMBRAMENTO', 'Nº DO DESMEMBRAMENTO', 'CLASSIFICAÇÃO DO ATIVO', 'HC', 'HS', 'EXPEDIÇÃO OU ESTIMATIVA DE EXPEDIÇÃO', 'INÍCIO', 'FIM', 'NÚMERO DO PRECATÓRIO', 'TIPO DE CESSÃO', 'CESSÃO AUTORA', 'CESSÃO AUTORA2', 'AUTORA CEDIDO PARA', 'CESSÃO HC', 'HC CEDIDO PARA', 'CESSÃO HS', 'HS CEDIDO PARA', 'STATUS DO ATIVO', 'ESTIMATIVA DE DATA DE PAGAMENTO', 'Valor atualizado Bruto 1', 'Desconto Previdenciário 1', 'HC + imposto 1', 'IR - RRA 1', 'Pgto Parcial e Prioridade 1', 'Recolhimento Legal 1', 'Valor atualizado Liquido 1', 'CJP Total', 'Outros Total', 'BOFA', 'Autoras Total', 'GAE Total', 'Atlas 7 Total', 'Droom Total', 'DISP Autoras', 'DISP HC', 'DISP HS', 'DISP HC e HS', 'DISP TOTAL']
