@@ -1,6 +1,5 @@
 from langchain_experimental.agents import create_csv_agent
 from langchain.llms import OpenAI
-from dotenv import load_dotenv
 import os
 import streamlit as st
 import pandas as pd
@@ -15,7 +14,7 @@ def CSV():
     load_dotenv()
 
     # Load the OpenAI API key from the environment variable
-    if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
+    if OPENAI_API_KEY is None or OPENAI_API_KEY == "":
         print("OPENAI_API_KEY is not set")
         exit(1)
     else:
