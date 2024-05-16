@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -16,7 +15,7 @@ haders = {
 
 def PDF():
     load_dotenv()
-    chave_openai = os.getenv('OPENAI_API_KEY')
+    chave_openai = OPENAI_API_KEY
     
     def extract_text_from_pdf(pdf_file):
         pdf_reader = PdfReader(pdf_file)
