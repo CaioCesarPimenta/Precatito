@@ -12,8 +12,6 @@ haders = {
 
 def CSV():
     
-    OPENAI_API_KEY = OPENAI_API_KEY
-
     # Load the OpenAI API key from the environment variable
     if OPENAI_API_KEY is None or OPENAI_API_KEY == "":
         print("OPENAI_API_KEY is not set")
