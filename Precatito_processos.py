@@ -9,6 +9,11 @@ from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 import os
 
+haders = {
+    "autorisation": st.secrets["OPENAI_API_KEY"],
+    "content-type": "application/json"
+}
+
 def PDF():
     load_dotenv()
     chave_openai = os.getenv('OPENAI_API_KEY')
