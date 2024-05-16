@@ -7,6 +7,7 @@ import pandas as pd
 haders = {
     "autorisation": st.secrets["OPENAI_API_KEY"],
     "autorisation": st.secrets["csv_file_path"],
+    "content-type": "application/json",
     "content-type": "application/json"
 }
 
