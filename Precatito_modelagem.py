@@ -5,6 +5,11 @@ import os
 import streamlit as st
 import pandas as pd
 
+haders = {
+    "autorisation": st.secrets["OPENAI_API_KEY"],
+    "content-type": "application/json"
+}
+
 def CSV():
     load_dotenv()
 
