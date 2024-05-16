@@ -14,7 +14,7 @@ haders = {
 }
 
 def PDF():
-    load_dotenv()
+   
     chave_openai = OPENAI_API_KEY
     
     def extract_text_from_pdf(pdf_file):
