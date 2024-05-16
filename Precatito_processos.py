@@ -17,6 +17,7 @@ def PDF():
    
     chave_openai = OPENAI_API_KEY
     
+    
     def extract_text_from_pdf(pdf_file):
         pdf_reader = PdfReader(pdf_file)
         text = ""
