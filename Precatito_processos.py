@@ -14,10 +14,7 @@ haders = {
 }
 
 def PDF():
-   
-    chave_openai = OPENAI_API_KEY
-    
-    
+ 
     def extract_text_from_pdf(pdf_file):
         pdf_reader = PdfReader(pdf_file)
         text = ""
@@ -50,14 +47,14 @@ def PDF():
         chunks = text_splitter.split_text(all_texts)
         
         # Create embeddings
-        embeddings = OpenAIEmbeddings(openai_api_key=chave_openai, model="text-embedding-ada-002")
+        embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY, model="text-embedding-ada-002")
         knowledge_base = FAISS.from_texts(chunks, embeddings)
         
         # Show user input
         user_question = st.text_input("Pergunte ao Precatito Goul:")
         if user_question:
             docs = knowledge_base.similarity_search(user_question)
-            llm = OpenAI(openai_api_key=chave_openai)
+            llm = OpenAI(openai_api_key=OPENAI_API_KEY)
             chain = load_qa_chain(llm, chain_type="stuff")
             with get_openai_callback() as cb:
                 response = chain.run(input_documents=docs, question=user_question)
