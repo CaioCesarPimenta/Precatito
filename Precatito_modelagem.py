@@ -31,7 +31,7 @@ def CSV():
                 df.to_csv(temp_csv_file, index=False)
                 
                 # Pass the CSV file path to create_csv_agent
-                agent = create_csv_agent(OpenAI(api_key=OPENAI_API_KEY,temperature=0), temp_csv_file, names=cola, sep=';')
+                agent = create_csv_agent(OpenAI(api_key=OPENAI_API_KEY,temperature=0,model="gpt-3.5-turbo-0125"), temp_csv_file, names=cola, sep=';')
                 
                 # Delete the temporary CSV file after use
                 os.remove(temp_csv_file)
