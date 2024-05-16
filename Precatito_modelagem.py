@@ -22,8 +22,8 @@ def CSV():
                 temp_csv_file = "temp.csv"
                 df.to_csv(temp_csv_file, index=False)
                 
-                # Create the OpenAI LLM instance
-                llm = OpenAI(api_key=OPENAI_API_KEY, temperature=0, model="gpt-3.5-turbo")
+                # Create the OpenAI LLM instance with the correct model
+                llm = OpenAI(api_key=OPENAI_API_KEY, model="text-davinci-003")
                 
                 # Pass the CSV file path to create_csv_agent
                 agent = create_csv_agent(llm, temp_csv_file, column_names=cola, sep=';')
