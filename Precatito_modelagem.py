@@ -31,8 +31,8 @@ def CSV():
                 # Delete the temporary CSV file after use
                 os.remove(temp_csv_file)
                 
-                # Run the agent with the user question
-                response = agent.run(user_question, endpoint="v1/chat/completions")  # Adjusted endpoint
+                # Run the agent with the user question and specify the endpoint
+                response = agent.run(user_question, options={"endpoint": "v1/chat/completions"})
                 st.write(response)
     else:
         st.error("CSV file not found.")
