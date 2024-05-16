@@ -32,7 +32,7 @@ def CSV():
                 os.remove(temp_csv_file)
                 
                 # Run the agent with the user question
-                response = agent.run(user_question)
+                 response = agent.run(user_question, options={'endpoint': 'v1/chat/completions'})
                 
                 # Display the response
                 st.write(response)
