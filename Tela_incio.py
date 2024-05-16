@@ -1,7 +1,8 @@
 import streamlit as st
-import skills.Precatito_processos as processo
-import skills.Precatito_modelagem as modelagem
+import Precatito_processos as processo
+import Precatito_modelagem as modelagem
 import openai
+
 
 def main():
     st.header("Precatito Goul🦉")
