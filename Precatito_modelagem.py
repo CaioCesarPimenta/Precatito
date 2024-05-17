@@ -38,7 +38,7 @@ def CSV():
                 # Delete the temporary CSV file after use
                 os.remove(temp_csv_file)
                 
-                response = agent.run(user_question, options={'endpoint': 'v1/chat/completions'})
+                response = agent.run(user_question)
                 st.write(response)
     else:
         st.error("Arquivo CSV não encontrado.")
