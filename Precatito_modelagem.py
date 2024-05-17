@@ -32,7 +32,8 @@ def CSV():
                     OpenAI(api_key=OPENAI_API_KEY, temperature=0, model="gpt-3.5-turbo-0125"),
                     temp_csv_file,
                     names=column_names,
-                    sep=';'
+                    sep=';',
+                    options={'endpoint': 'v1/chat/completions'}  # Alterando o endpoint para v1/chat/completions
                 )
                 
                 # Delete the temporary CSV file after use
