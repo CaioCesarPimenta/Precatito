@@ -1,7 +1,7 @@
 import streamlit as st
-import skills.Precatito_processos as processo
-import skills.Precatito_modelagem as modelagem
-import skills.modelagem_consulta as consulta
+import Precatito_processos as processo
+import Precatito_modelagem as modelagem
+import modelagem_consulta as consulta
 import openai
 
 def main():
