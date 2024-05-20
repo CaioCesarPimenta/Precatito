@@ -35,7 +35,7 @@ def consulta_modelagem():
 
     clasificacao_option = sorted(df['CLASSIFICAÇÃO DO PERÍODO'][df.AUTORA == autora_value].unique().tolist())
 
-    clasificacao_value =  st.selectbox('CLASSIFICAÇÃO', clasificacao_option)
+    clasificacao_value =  st.selectbox(clasificacao_option)
 
     PROC_option = sorted(df['PROC'][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value].unique().tolist())
 
