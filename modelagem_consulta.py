@@ -37,6 +37,11 @@ def consulta_modelagem():
 
     clasificacao_value =  st.selectbox('PROC', clasificacao_option)
 
+    PROC_option = sorted(df['PROC'][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value].unique().tolist())
+
+    PROC_value =  st.selectbox('PROC', PROC_option)
+
+    #---------------------------------------------------------------------------------------------------------------------------------------------
 
 
     VALORES = st.selectbox('INFO', ['VALOR PRESENTE','CESSOES','DISPONIVEL',"HC/HS"])
