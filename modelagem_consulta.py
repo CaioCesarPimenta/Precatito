@@ -47,13 +47,13 @@ def consulta_modelagem():
 
     if VALORES == 'VALOR PRESENTE':
 
-       st.write(df[['Valor atualizado Bruto 1','Desconto Previdenciário 1','HC + imposto 1','IR - RRA 1','Pgto Parcial e Prioridade 1','Recolhimento Legal 1','Valor atualizado Liquido 1']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value])
+       st.write(df[['Valor atualizado Bruto 1','Desconto Previdenciário 1','HC + imposto 1','IR - RRA 1','Pgto Parcial e Prioridade 1','Recolhimento Legal 1','Valor atualizado Liquido 1']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value][df.PROC == PROC_value])
     
     elif VALORES == 'CESSOES':
-       st.write(df[['CJP Total','Outros Total','BOFA','Autoras Total','GAE Total','Atlas 7 Total','Droom Total']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value])
+       st.write(df[['CJP Total','Outros Total','BOFA','Autoras Total','GAE Total','Atlas 7 Total','Droom Total']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value][df.PROC == PROC_value])
 
     elif VALORES == 'DISPONIVEL':
-        st.write(df[['DISP Autoras','DISP HC','DISP HS','DISP HC e HS']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value])
+        st.write(df[['DISP Autoras','DISP HC','DISP HS','DISP HC e HS']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value][df.PROC == PROC_value])
     
     elif VALORES == "HC/HS":
-        st.write(df[['CLASSIFICAÇÃO DO ATIVO','HC','HS']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value])
+        st.write(df[['CLASSIFICAÇÃO DO ATIVO','HC','HS']][df.AUTORA == autora_value][df['CLASSIFICAÇÃO DO PERÍODO'] == clasificacao_value][df.PROC == PROC_value])
