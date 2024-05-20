@@ -41,8 +41,7 @@ def consulta_modelagem():
 
     PROC_value =  st.selectbox('PROC', PROC_option)
 
-    #---------------------------------------------------------------------------------------------------------------------------------------------
-
+    
 
     VALORES = st.selectbox('INFO', ['VALOR PRESENTE','CESSOES','DISPONIVEL',"HC/HS"])
 
